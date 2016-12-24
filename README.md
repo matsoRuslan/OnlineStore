@@ -10,6 +10,7 @@ To run this project you need to:
   * Go to “Run” menu and click “Edit Configurations…”, click “+” icon at the top left and select “Maven”
   * Set working directory to your project location.
   * Set command line to "tomcat7:run".
+- Now project can be accessed at: http://localhost:8080/home/ 
 - You can check login info in database table "User":
   - admin: login-admin, password-12345678
   - user: login-user1, password-11111111

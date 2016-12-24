@@ -43,7 +43,7 @@ public class AppConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/onlinestore?autoReconnect=true&useSSL=false");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/onlinestore?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false");
         dataSource.setUsername("userName");
         dataSource.setPassword("password");
         return dataSource;

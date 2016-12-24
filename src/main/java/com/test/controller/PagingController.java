@@ -37,7 +37,7 @@ public class PagingController {
     ResponseEntity<List<Product>> findPage(@RequestParam(value = "size") int size, @RequestParam(value = "page") int page, @RequestParam(value = "search", required = false) String productSearch) {
         page = (page - 1) * size;
         List<Product> products = pagingService.findPaging(page, size);
-        if (!productSearch.equals("")) {
+        if (productSearch!= null &&!productSearch.equals("")) {
             products = productService.findBySearchString(productSearch);
         }
         if (products == null) {

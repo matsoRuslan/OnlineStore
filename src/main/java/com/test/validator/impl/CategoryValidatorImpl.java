@@ -31,8 +31,5 @@ public class CategoryValidatorImpl implements CategoryValidator {
         if (!category.getParent().getTitle().equals("") && categoryService.findByTitle(category.getParent().getTitle()) == null) {
             errors.rejectValue("parent.title", "categoryParent");
         }
-        if (categoryService.findByTitle(category.getTitle()) != null) {
-            errors.rejectValue("title", "categoryTitle");
-        }
     }
 }

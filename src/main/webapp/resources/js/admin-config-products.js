@@ -101,9 +101,9 @@ $(document).ready(function () {
             url: "set-product-inactive",
             data: "" + productId.data.param1,
             success: function () {
+                location.reload();
             }
         });
-        location.reload();
     }
 
     function deActiveClick(productId) {
@@ -113,9 +113,9 @@ $(document).ready(function () {
             url: "set-product-active",
             data: "" + productId.data.param1,
             success: function () {
+                location.reload();
             }
         });
-        location.reload();
     }
 
     function fullDesc(productId, title, fullDescription) {
